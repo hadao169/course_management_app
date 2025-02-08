@@ -11,7 +11,7 @@ import db from "./config/db/index.js";
 db.connect();
 
 const app = express();
-const port = 3000;
+const port = 3005;
 
 // Resolve __dirname equivalent in ES Module
 const __filename = fileURLToPath(import.meta.url);
@@ -47,7 +47,6 @@ app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "resources", "views"));
 
 // Routes init
-console.log(route);
 route(app);
 
 app.listen(port, () =>
